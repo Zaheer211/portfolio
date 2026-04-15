@@ -24,7 +24,7 @@
         <div class="hero-inner">
             <div class="hero-text">
                 <div class="hero-badge">⭐ Top Rated on Upwork</div>
-                <h1>Building <span>Web & App</span><br>Solutions That Deliver</h1>
+                <h1>Building <span>Web & Automation</span><br>Solutions That Deliver</h1>
                 <p class="hero-sub">Full-Stack Developer with 8+ years on Upwork. Helping businesses turn ideas into fast,
                     scalable, and beautiful digital products.</p>
                 <div class="stats">
@@ -51,14 +51,11 @@
             <div class="hero-photo-wrap">
                 <div class="hero-photo-ring">
                     <div class="hero-photo" id="heroPhoto">
-                        <div class="hero-photo-placeholder" onclick="document.getElementById('photoInput').click()">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-                            <span>Click to upload<br>your photo</span>
-                        </div>
-                    </div>
+                        <img src="images/avatar.jpg" alt="Zaheer uddin - Full Stack Developer" class="hero-avatar-img">
+                    </img>
                 </div>
                 <div class="hero-availability"><span class="avail-dot"></span> Available for new projects</div>
-                <input type="file" id="photoInput" class="hero-photo-input" accept="image/*" onchange="loadPhoto(event)" />
+                <input type="file" id="photoInput" class="hero-photo-input" accept="image/*" />
             </div>
         </div>
     </section>
@@ -72,7 +69,6 @@
                 <button class="filter-btn" onclick="filterProjects('fullstack',this)">Full Stack</button>
                 <button class="filter-btn" onclick="filterProjects('frontend',this)">Frontend</button>
                 <button class="filter-btn" onclick="filterProjects('backend',this)">Backend</button>
-                <button class="filter-btn" onclick="filterProjects('mobile',this)">Mobile</button>
             </div>
             <div class="projects-grid" id="projectsGrid"></div>
         </div>
