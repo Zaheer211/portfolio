@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dev Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <div class="logo">Zaheer uddin </div>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badge">⭐ Top Rated on Upwork</div>
+                <h1>Building <span>Web & App</span><br>Solutions That Deliver</h1>
+                <p class="hero-sub">Full-Stack Developer with 8+ years on Upwork. Helping businesses turn ideas into fast,
+                    scalable, and beautiful digital products.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-num">8+</div>
+                        <div class="stat-lbl">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">30+</div>
+                        <div class="stat-lbl">Projects Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">100%</div>
+                        <div class="stat-lbl">Job Success</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">25+</div>
+                        <div class="stat-lbl">Happy Clients</div>
+                    </div>
+                </div>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#skills" class="btn btn-outline">My Stack</a>
+            </div>
+            <div class="hero-photo-wrap">
+                <div class="hero-photo-ring">
+                    <div class="hero-photo" id="heroPhoto">
+                        <div class="hero-photo-placeholder" onclick="document.getElementById('photoInput').click()">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                            <span>Click to upload<br>your photo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-availability"><span class="avail-dot"></span> Available for new projects</div>
+                <input type="file" id="photoInput" class="hero-photo-input" accept="image/*" onchange="loadPhoto(event)" />
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="sec-inner">
+            <div class="sec-label reveal">Portfolio</div>
+            <div class="sec-title reveal">Featured <span>Projects</span></div>
+            <div class="filters reveal">
+                <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+                <button class="filter-btn" onclick="filterProjects('fullstack',this)">Full Stack</button>
+                <button class="filter-btn" onclick="filterProjects('frontend',this)">Frontend</button>
+                <button class="filter-btn" onclick="filterProjects('backend',this)">Backend</button>
+                <button class="filter-btn" onclick="filterProjects('mobile',this)">Mobile</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="sec-inner">
+            <div class="sec-label reveal">Expertise</div>
+            <div class="sec-title reveal">Skills & <span>Tools</span></div>
+            <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">Zaheer uddin</div>
+            <p>8+ Years · 30+ Projects · Full-Stack Developer on Upwork</p>
+            <p style="margin-top:8px;font-size:.75rem">© 2026 · Built with passion</p>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+        <div class="modal" id="modal">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-img"><img id="modalImg" src="" alt="" /></div>
+            <div class="modal-body">
+                <div class="modal-meta">
+                    <span class="modal-year" id="modalYear"></span>
+                    <span class="modal-cat" id="modalCat"></span>
+                </div>
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-desc" id="modalDesc"></div>
+                <div class="modal-section-title">Key Highlights</div>
+                <ul class="modal-highlights" id="modalHighlights"></ul>
+                <div class="modal-section-title">Tech Stack</div>
+                <div class="modal-tags" id="modalTags"></div>
+                <div id="modalFeedbackWrap"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
